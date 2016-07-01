@@ -14,15 +14,15 @@ Load [`request`](https://www.npmjs.com/package/request) module from either CWD o
 To keep project dependencies smaller.
 
 ```
-$ npm install request@2.67.0
+$ npm install request@2.72.0
 $ du -sh ./node_modules
-> 4.4M	node_modules
+> 4.7M	./node_modules
 ```
 
 ```
-$ npm install load-request-from-cwd-or-npm@1.0.0
+$ npm install load-request-from-cwd-or-npm@2.0.0
 $ du -sh ./node_modules
-> 352K	node_modules
+> 352K	./node_modules
 ```
 
 If `load-request-from-cwd-or-npm` is installed to your project directory, you can use `request` module in your program even though it's not actually installed.
@@ -74,7 +74,7 @@ loadRequestFromCwdOrNpm().then(request => {
 });
 ```
 
-The returned promise will be [fulfilled](http://promisesaplus.com/#point-26) with `request`, or [rejected](http://promisesaplus.com/#point-30) when it fails to find the module from either directories.
+The returned promise will be [fulfilled](https://promisesaplus.com/#point-26) with `request`, or [rejected](https://promisesaplus.com/#point-30) when it fails to find the module from either directories.
 
 ## License
 
