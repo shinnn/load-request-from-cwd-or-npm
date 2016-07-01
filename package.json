@@ -5,7 +5,7 @@
   "repository": "shinnn/load-request-from-cwd-or-npm",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --fix --config @shinnn/node-legacy index.js test",
+    "pretest": "eslint --fix --config @shinnn/node index.js test",
     "test": "node test/test.js && node test/test-broken-npm.js && node test/test-no-npm.js",
     "coverage": "istanbul cover --dir=coverage/test test/test.js && istanbul cover --dir=coverage/test-broken-npm test/test-broken-npm.js && istanbul cover --dir=coverage/test-no-npm test/test-no-npm.js && istanbul report"
   },
@@ -39,13 +39,12 @@
     "then"
   ],
   "dependencies": {
-    "load-from-cwd-or-npm": "^1.0.0",
-    "pinkie-promise": "^2.0.0"
+    "load-from-cwd-or-npm": "^2.0.0"
   },
   "devDependencies": {
-    "@shinnn/eslint-config-node-legacy": "^2.0.0",
-    "eslint": "^2.5.3",
-    "istanbul": "^0.4.2",
-    "tape": "^4.5.1"
+    "@shinnn/eslint-config-node": "^2.0.0",
+    "eslint": "^2.13.1",
+    "istanbul": "^0.4.4",
+    "tape": "^4.6.0"
   }
 }

@@ -1,23 +1,23 @@
 'use strict';
 
-var assert = require('assert');
-var http = require('http');
+const assert = require('assert');
+const http = require('http');
 
-var loadRequestFromCwdOrNpm = require('..');
-var test = require('tape');
+const loadRequestFromCwdOrNpm = require('..');
+const test = require('tape');
 
-test('loadFromCwdOrNpm()', function(t) {
+test('loadFromCwdOrNpm()', t => {
   t.plan(2);
 
   t.strictEqual(loadRequestFromCwdOrNpm.name, 'loadRequestFromCwdOrNpm', 'should have a function name.');
 
-  var server = http.createServer(function(req, res) {
+  const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'application/json'});
     res.end('{"a": 1}');
   }).listen(8124);
 
-  loadRequestFromCwdOrNpm().then(function(request) {
-    request.get('http://localhost:8124', {json: true}, function(err, res, body) {
+  loadRequestFromCwdOrNpm().then(request => {
+    request.get('http://localhost:8124', {json: true}, (err, res, body) => {
       server.close();
       assert.ifError(err);
 

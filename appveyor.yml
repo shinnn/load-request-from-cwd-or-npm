@@ -1,18 +1,12 @@
 shallow_clone: true
 version: '{build}'
 skip_tags: true
-environment:
-  matrix:
-    - nodejs_version: '6'
-    - nodejs_version: '0'
-    - nodejs_version: '0.10'
 install:
-  - ps: Install-Product node $env:nodejs_version
-  - npm uninstall --save-dev @shinnn/eslint-config-node-legacy eslint
+  - ps: Install-Product node Stable
+  - npm uninstall --save-dev @shinnn/eslint-config-node eslint istanbul
   - npm install
 build: off
 test_script:
   - node test\test.js
-  - If Not %nodejs_version%==0.10 node test\test-broken-npm.js
-  - If Not %nodejs_version%==0.10 node test\test-no-npm.js
-cache: node_modules -> package.json
+  - node test\test-broken-npm.js
+  - node test\test-no-npm.js

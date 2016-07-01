@@ -1,18 +1,18 @@
 'use strict';
 
-var path = require('path');
+const path = require('path');
 
-var test = require('tape');
+const test = require('tape');
 
-test('loadFromCwdOrNpm() with broken npm CLI', function(t) {
+test('loadFromCwdOrNpm() with broken npm CLI', t => {
   t.plan(1);
 
   process.env.PATH = path.resolve('test/fixtures');
-  var loadRequestFromCwdOrNpm = require('..');
+  const loadRequestFromCwdOrNpm = require('..');
 
-  loadRequestFromCwdOrNpm().then(t.fail, function(err) {
+  loadRequestFromCwdOrNpm().then(t.fail, err => {
     t.strictEqual(
-      /Install "request" and try again\. \(npm install request\)$/.test(err.message),
+      err.message.includes('Install "request" and try again. (npm install request)'),
       true,
       'should fail when npm CLI is not installed correctly.'
     );

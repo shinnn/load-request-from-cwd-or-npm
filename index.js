@@ -4,15 +4,14 @@
 */
 'use strict';
 
-var PinkiePromise = require('pinkie-promise');
-var loadFromCwdOrNpm = require('load-from-cwd-or-npm');
+const loadFromCwdOrNpm = require('load-from-cwd-or-npm');
 
-var loadRequest = loadFromCwdOrNpm('request').catch(function modifyError(err) {
+const loadRequest = loadFromCwdOrNpm('request').catch(err => {
   if (err && err.code === 'MODULE_NOT_FOUND') {
     err.message += ' Install "request" and try again. (npm install request)';
   }
 
-  return PinkiePromise.reject(err);
+  return Promise.reject(err);
 });
 
 module.exports = function loadRequestFromCwdOrNpm() {
