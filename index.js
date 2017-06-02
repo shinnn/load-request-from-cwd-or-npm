@@ -6,14 +6,8 @@
 
 const loadFromCwdOrNpm = require('load-from-cwd-or-npm');
 
-const loadRequest = loadFromCwdOrNpm('request').catch(err => {
-  if (err && err.code === 'MODULE_NOT_FOUND') {
-    err.message += ' Install "request" and try again. (npm install request)';
-  }
-
-  return Promise.reject(err);
-});
+const promise = loadFromCwdOrNpm('request');
 
 module.exports = function loadRequestFromCwdOrNpm() {
-  return loadRequest;
+  return promise;
 };

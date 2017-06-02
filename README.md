@@ -4,8 +4,6 @@
 [![Build Status](https://travis-ci.org/shinnn/load-request-from-cwd-or-npm.svg?branch=master)](https://travis-ci.org/shinnn/load-request-from-cwd-or-npm)
 [![Build status](https://ci.appveyor.com/api/projects/status/6iihj63cx8t3pkf6/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/load-request-from-cwd-or-npm/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/load-request-from-cwd-or-npm.svg)](https://coveralls.io/github/shinnn/load-request-from-cwd-or-npm)
-[![Dependency Status](https://david-dm.org/shinnn/load-request-from-cwd-or-npm.svg)](https://david-dm.org/shinnn/load-request-from-cwd-or-npm)
-[![devDependency Status](https://david-dm.org/shinnn/load-request-from-cwd-or-npm/dev-status.svg)](https://david-dm.org/shinnn/load-request-from-cwd-or-npm#info=devDependencies)
 
 Load [`request`](https://www.npmjs.com/package/request) module from either CWD or [npm](https://www.npmjs.com/) CLI directory.
 
@@ -78,6 +76,6 @@ The returned promise will be [fulfilled](https://promisesaplus.com/#point-26) wi
 
 ## License
 
-Copyright (c) 2015 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 - 2017 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).

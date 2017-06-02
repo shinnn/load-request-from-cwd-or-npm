@@ -10,9 +10,9 @@ test('loadFromCwdOrNpm() with broken npm CLI', t => {
   process.env.PATH = path.resolve('test/fixtures');
   const loadRequestFromCwdOrNpm = require('..');
 
-  loadRequestFromCwdOrNpm().then(t.fail, err => {
+  loadRequestFromCwdOrNpm().then(t.fail, ({message}) => {
     t.strictEqual(
-      err.message.includes('Install "request" and try again. (npm install request)'),
+      message.includes('Install "request" and try again. (`npm install request`)'),
       true,
       'should fail when npm CLI is not installed correctly.'
     );
