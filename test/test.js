@@ -6,7 +6,7 @@ const http = require('http');
 const loadRequestFromCwdOrNpm = require('..');
 const test = require('tape');
 
-test('loadFromCwdOrNpm()', t => {
+test('loadRequestFromCwdOrNpm()', t => {
   t.plan(2);
 
   t.strictEqual(loadRequestFromCwdOrNpm.name, 'loadRequestFromCwdOrNpm', 'should have a function name.');

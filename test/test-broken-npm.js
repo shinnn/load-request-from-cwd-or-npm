@@ -4,7 +4,7 @@ const path = require('path');
 
 const test = require('tape');
 
-test('loadFromCwdOrNpm() with broken npm CLI', t => {
+test('loadRequestFromCwdOrNpm() with broken npm CLI', t => {
   t.plan(1);
 
   process.env.PATH = path.resolve('test/fixtures');
