@@ -1,12 +1,7 @@
 shallow_clone: true
-version: '{build}'
 skip_tags: true
 install:
   - ps: Install-Product node Stable
-  - npm uninstall --save-dev @shinnn/eslint-config-node eslint istanbul
   - npm install
 build: off
-test_script:
-  - node test\test.js
-  - node test\test-broken-npm.js
-  - node test\test-no-npm.js
+test_script: node test\test.js
