@@ -1,6 +1,6 @@
 {
 	"name": "load-request-from-cwd-or-npm",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Load `request` module from either CWD or npm CLI directory",
 	"repository": "shinnn/load-request-from-cwd-or-npm",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",

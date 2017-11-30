@@ -5,7 +5,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/6iihj63cx8t3pkf6/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/load-request-from-cwd-or-npm/branch/master)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/load-request-from-cwd-or-npm.svg)](https://coveralls.io/github/shinnn/load-request-from-cwd-or-npm)
 
-Load [`request`](https://www.npmjs.com/package/request) module from either CWD or [npm CLI](https://www.npmjs.com/) CLI directory.
+Load [`request`](https://www.npmjs.com/package/request) module from either CWD or [npm](https://www.npmjs.com/) CLI directory.
 
 ## Why?
 
@@ -17,7 +17,7 @@ $ du -sh ./node_modules
 5.6M	./node_modules
 ```
 
-```
+```console
 $ npm install load-request-from-cwd-or-npm@2.0.0
 $ du -sh ./node_modules
 > 300K	./node_modules
