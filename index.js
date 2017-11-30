@@ -1,7 +1,3 @@
-/*!
- * load-request-from-cwd-or-npm | MIT (c) Shinnosuke Watanabe
- * https://github.com/shinnn/load-request-from-cwd-or-npm
-*/
 'use strict';
 
 const loadFromCwdOrNpm = require('load-from-cwd-or-npm');

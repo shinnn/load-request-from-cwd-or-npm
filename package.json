@@ -9,7 +9,7 @@
     "test": "node test/test.js && node test/test-broken-npm.js && node test/test-no-npm.js",
     "coverage": "istanbul cover --dir=coverage/test test/test.js && istanbul cover --dir=coverage/test-broken-npm test/test-broken-npm.js && istanbul cover --dir=coverage/test-no-npm test/test-no-npm.js && istanbul report"
   },
-  "license": "MIT",
+  "license": "ISC",
   "files": [
     "index.js"
   ],
