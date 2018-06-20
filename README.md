@@ -78,4 +78,4 @@ The returned promise will be [fulfilled](https://promisesaplus.com/#point-26) wi
 
 ## License
 
-[ISC License](./LICENSE) © 2017 Shinnosuke Watanabe
+[ISC License](./LICENSE) © 201 - 2018 Shinnosuke Watanabe

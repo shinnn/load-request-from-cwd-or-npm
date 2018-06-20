@@ -38,7 +38,7 @@
 		"then"
 	],
 	"dependencies": {
-		"load-from-cwd-or-npm": "^2.2.1"
+		"load-from-cwd-or-npm": "^3.0.0"
 	},
 	"devDependencies": {
 		"@shinnn/eslint-config-node": "^5.0.0",

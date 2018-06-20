@@ -6,6 +6,8 @@ const {join, resolve} = require('path');
 const test = require('tape');
 const clearAllModules = require('clear-module').all;
 
+delete process.env.npm_execpath;
+
 test('loadRequestFromCwdOrNpm()', async t => {
 	t.plan(1);
 
